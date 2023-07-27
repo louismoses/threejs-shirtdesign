@@ -10,7 +10,6 @@ import {
   headTextAnimation,
   slideAnimation,
 } from "../config/motion";
-import CustomeButton from "../components/CustomButton";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -26,6 +25,7 @@ const Home = () => {
                 className=" w-8 h-8 object-contain"
               />
             </motion.header>
+
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
                 LET'S <br className="xl:block hidden" /> DO IT
@@ -40,7 +40,7 @@ const Home = () => {
                 tool. <strong>Unleash your imagination</strong> and define your
                 own style
               </p>
-              <CustomeButton
+              <CustomButton
                 type="filled"
                 title="Customize It"
                 handleClick={() => (state.intro = false)}

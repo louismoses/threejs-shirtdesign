@@ -1,7 +1,11 @@
 import React from "react";
+import { useSnapshot } from "valtio";
+
 import state from "../store";
 
-const CustomeButton = ({ title, type, customStyle, handleClick }) => {
+const CustomButton = ({ type, title, customStyles, handleClick }) => {
+  const snap = useSnapshot(state);
+
   const generateStyle = (type) => {
     if (type === "filled") {
       return {
@@ -12,11 +16,13 @@ const CustomeButton = ({ title, type, customStyle, handleClick }) => {
   };
   return (
     <button
-      className={`px-2 py-1.5 rounded-md ${customStyle} style={generateStyle(type)} `}
+      className={`px-2 py-1.5 rounded-md ${customStyles} `}
+      style={generateStyle(type)}
+      onClick={handleClick}
     >
       {title}
     </button>
   );
 };
 
-export default CustomeButton;
+export default CustomButton;
