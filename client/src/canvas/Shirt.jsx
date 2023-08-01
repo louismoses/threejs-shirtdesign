@@ -12,6 +12,7 @@ const Shirt = () => {
 
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
+
   return (
     <group>
       <mesh
