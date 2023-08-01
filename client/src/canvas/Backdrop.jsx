@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 const Backdrop = () => {
-  return <div>Backdrop</div>;
+  return <group>Backdrop</group>;
 };
 
 export default Backdrop;
