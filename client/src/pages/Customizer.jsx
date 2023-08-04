@@ -19,6 +19,15 @@ import {
 
 const Customizer = () => {
   const snap = useSnapshot(state);
+
+  const [file, setFile] = useState("");
+
+  const [prompt, usePrompt] = useState("");
+  const [generatingImg, useGeneratingImg] = useState(false);
+
+  // show tab content depending on the activeTab
+  const generateTabContent = () => {};
+
   return (
     <AnimatePresence>
       {!snap.intro && (
